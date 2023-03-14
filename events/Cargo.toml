@@ -1,0 +1,23 @@
+[package]
+name = "events"
+version = "0.1.0"
+edition = "2021"
+description = "A nostd Event "
+authors = ["Jan Kraemer <jan@spectrejan.de>"]
+license = "LGPLv2"
+feature = "no_std"
+
+[lib]
+name = "events"
+test = false
+edition = "2021"
+
+[dependencies]
+rand = "0.8.5"
+
+[dev-dependencies]
+
+[features]
+
+[[example]]
+name = "standard_example"
