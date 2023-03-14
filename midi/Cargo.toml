@@ -1,0 +1,22 @@
+[package]
+name = "midi"
+version = "0.1.0"
+edition = "2021"
+description = "A nostd library to provide basic MIDI functionality"
+authors = ["Jan Kraemer <jan@spectrejan.de>"]
+license = "LGPLv2"
+feature = "no_std"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+events = { path = "../events" }
+heapless = "0.7.16"
+
+[dev-dependencies]
+rand = "0.8.5"
+
+
+[features]
+std = []
+
