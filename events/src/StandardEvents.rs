@@ -46,7 +46,10 @@ impl IEventEngine for StandardEvents {
 
     fn wait_for_event(&self) {
         let ev2 = Arc::clone(&self.ev);
-        let mut event = ev2.lock().unwrap();
-        self.cvar.wait(event);
+        let event = ev2.lock().unwrap();
+        match self.cvar.wait(event) {
+            Ok(_) => {},
+            Err(error) => eprintln!("Error while waiting on condition variable: {}", error),
+        };
     }
 }
