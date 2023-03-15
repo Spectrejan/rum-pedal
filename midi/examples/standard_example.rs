@@ -8,7 +8,7 @@ fn main() {
     println!("6 Button pedal example");
 
     let engine = StandardEvents::StandardEvents::new();
-    let rumi = Rum::<Button6, 6>::new();
+    let rumi = Rum::<Button6>::new();
 
     engine.start();
 
