@@ -1,14 +1,13 @@
 use events::IEventEngine;
 use events::StandardEvents;
 use midi;
-use midi::button::Button6;
 use midi::rum::Rum;
 
 fn main() {
     println!("6 Button pedal example");
 
     let engine = StandardEvents::StandardEvents::new();
-    let rumi = Rum::<Button6>::new();
+    let rumi = Rum::<6>::new();
 
     engine.start();
 
